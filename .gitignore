@@ -1,0 +1,28 @@
+# Core Drupal files
+core/
+vendor/
+node_modules/
+
+# User uploaded files
+sites/default/files/
+sites/*/private/
+
+# Configuration
+sites/default/settings.php
+sites/default/services.yml
+
+# Environment & Secrets
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & Temp
+logs/
+*.log
