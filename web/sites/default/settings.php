@@ -76,10 +76,10 @@
  * specific needs.
  *
  * @code
- * $databases['default']['default'] = [
- *   'database' => 'database_name',
- *   'username' => 'sql_username',
- *   'password' => 'sql_password',
+ * $databases['default']['default'] = array [
+ *   'database' => 'drupal_db',
+ *   'username' => 'drupal_user',
+ *   'password' => 'Drupal_Secure#2026',
  *   'host' => 'localhost',
  *   'port' => '3306',
  *   'driver' => 'mysql',
