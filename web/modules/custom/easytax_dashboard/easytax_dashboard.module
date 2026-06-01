@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function easytax_dashboard_theme($existing, $type, $theme, $path) {
+  return [
+    'easytax_dashboard_page' => [
+      'variables' => [
+        'stats' => NULL,
+        'recent_applications' => NULL,
+      ],
+      'template' => 'easytax-dashboard',
+    ],
+  ];
+}

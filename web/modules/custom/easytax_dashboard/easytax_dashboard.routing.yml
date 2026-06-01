@@ -1,0 +1,7 @@
+easytax_dashboard.admin_dashboard:
+  path: '/admin/easytax-dashboard'
+  defaults:
+    _controller: '\Drupal\easytax_dashboard\Controller\DashboardController::index'
+    _title: 'EasyTax Dashboard'
+  requirements:
+    _permission: 'access administration pages'

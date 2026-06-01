@@ -1,0 +1,57 @@
+<div class="easytax-dashboard-wrapper">
+  <div class="easytax-dashboard-header">
+    <h1>Welcome back, Admin</h1>
+    <p>Here's what's happening with your applications today.</p>
+  </div>
+
+  <div class="easytax-stats-grid">
+    <div class="easytax-stat-card">
+      <div class="easytax-stat-title">Total Users</div>
+      <div class="easytax-stat-value">{{ stats.total_users|number_format }}</div>
+    </div>
+    <div class="easytax-stat-card">
+      <div class="easytax-stat-title">Active Applications</div>
+      <div class="easytax-stat-value">{{ stats.active_applications|number_format }}</div>
+    </div>
+    <div class="easytax-stat-card">
+      <div class="easytax-stat-title">Pending Services</div>
+      <div class="easytax-stat-value">{{ stats.pending_services|number_format }}</div>
+    </div>
+    <div class="easytax-stat-card">
+      <div class="easytax-stat-title">Revenue</div>
+      <div class="easytax-stat-value">{{ stats.revenue }}</div>
+    </div>
+  </div>
+
+  <div class="easytax-applications-section">
+    <h2>Recent Applications</h2>
+    <div class="table-responsive">
+      <table class="easytax-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for app in recent_applications %}
+            <tr>
+              <td><strong>{{ app.id }}</strong></td>
+              <td>{{ app.user }}</td>
+              <td>{{ app.date|date("M d, Y") }}</td>
+              <td>
+                <span class="status-badge {{ app.status|lower }}">{{ app.status }}</span>
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td colspan="4">No recent applications found.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
