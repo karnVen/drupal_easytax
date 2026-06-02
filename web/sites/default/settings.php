@@ -860,10 +860,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => '/home/karnven/drupal/web/sites/default/files/.sqlite',
+  'database' => 'drupal_db',
+  'username' => 'drupal_user',
+  'password' => 'Drupal_Secure#2026!',
   'prefix' => '',
-  'driver' => 'sqlite',
-  'namespace' => 'Drupal\\sqlite\\Driver\\Database\\sqlite',
-  'autoload' => 'core/modules/sqlite/src/Driver/Database/sqlite/',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_BJv6g93wktH3ybXAeQjyi2GDIarwi3ldVJvWNfOHT1RPlhDF2gqG602x1vvFeYQ28ZPv6noCrg/sync';
