@@ -1,0 +1,53 @@
+{# 
+  EasyTax Hero Banner Component
+  Maps directly to the top section of image_e769dc.jpg
+#}
+<section class="hero-wrapper" style="background-color: #f2f9f6; padding: 60px 20px; text-align: center;">
+  
+  <div class="hero-container" style="max-width: 1200px; margin: 0 auto;">
+    
+    {# Pre-Header Tagline #}
+    {% if content.field_pre_header %}
+      <span class="hero-badge" style="color: #16a34a; font-weight: 60px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 15px;">
+        {{ content.field_pre_header }}
+      </span>
+    {% endif %}
+
+    {# Main Core Headline #}
+    {% if content.field_main_headline %}
+      <h1 class="hero-title" style="font-size: 2.5rem; color: #0f172a; font-weight: 800; line-height: 1.2; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        {{ content.field_main_headline }}
+      </h1>
+    {% endif %}
+
+    {# Two Main Action Cards Grid #}
+    <div class="hero-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+      
+      {# Card 1: DIY Filing Pipeline #}
+      <div class="action-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+        <div class="card-icon" style="margin-bottom: 20px;">
+          <!-- SVG Icon for DIY goes here -->
+        </div>
+        <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 15px;">File ITR Yourself</h3>
+        <p style="color: #64748b; margin-bottom: 25px;">Quick, automated, and direct processing for standard income structures.</p>
+        <div class="card-cta">
+          {{ content.field_primary_cta }}
+        </div>
+      </div>
+
+      {# Card 2: Expert Assisted Pipeline #}
+      <div class="action-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+        <div class="card-icon" style="margin-bottom: 20px;">
+          <!-- SVG Icon for Expert assisted goes here -->
+        </div>
+        <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 15px;">Talk to a Tax Expert</h3>
+        <p style="color: #64748b; margin-bottom: 25px;">Full-service professional backing for complex business filings and GST requirements.</p>
+        <div class="card-cta">
+          {{ content.field_secondary_cta }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

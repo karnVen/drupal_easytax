@@ -1,0 +1,14 @@
+name: 'EasyTax UI Kit'
+type: theme
+description: 'A custom frontend playground to master Twig, CSS, and Preprocess hooks.'
+core_version_requirement: '^10 || ^11'
+base theme: stable9
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  breadcrumb: 'Breadcrumb'
+  content: 'Main content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+  footer2: 'heroFooter'
